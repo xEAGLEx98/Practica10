@@ -9,7 +9,7 @@ namespace AccesoDatosTienda
 {
     public class AccesoProductos
     {
-        Base b = new Base("localhost", "root", "", "Tienda2");
+        Base b = new Base("localhost", "root", "", "tienda2");
         public void Borrar(dynamic entidad)
         {
             b.Comando(String.Format("CALL DeleteProductos({0})", entidad.IdProductos));

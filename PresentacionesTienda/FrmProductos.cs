@@ -59,6 +59,11 @@ namespace PresentacionesTienda
             a.ShowDialog();
         }
 
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            Actualizar();
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
