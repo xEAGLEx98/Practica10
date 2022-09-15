@@ -23,7 +23,7 @@ namespace AccesoDatosTienda
 
         public DataSet Mostrar(string filtro)
         {
-            return b.Obtener(string.Format("CALL ShowProductos('%{0}%')", filtro), "Tienda2");
+            return b.Obtener(string.Format("CALL ShowProductos('%{0}%')", filtro), "productos");
         }
     }
 }

@@ -40,6 +40,7 @@ namespace PresentacionesTienda
             f.Guardar(new Productos(FrmProductos.producto.IdProductos,
                 txtNombre.Text, txtDescripcion.Text, 
                 double.Parse(txtCosto.Text)));
+            Close();
         }
     }
 }
