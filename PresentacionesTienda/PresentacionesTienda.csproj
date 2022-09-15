@@ -66,5 +66,15 @@
       <DependentUpon>FrmProductosAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntidadesTienda\EntidadesTienda.csproj">
+      <Project>{5e71d3a5-8b8c-436e-8c57-6ec73dca1c13}</Project>
+      <Name>EntidadesTienda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManejadoresTienda\ManejadoresTienda.csproj">
+      <Project>{d37555ad-90ef-4a06-922e-d8f9bbca4b45}</Project>
+      <Name>ManejadoresTienda</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

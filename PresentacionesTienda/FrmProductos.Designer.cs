@@ -30,9 +30,9 @@ namespace PresentacionesTienda
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -48,6 +48,15 @@ namespace PresentacionesTienda
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(788, 57);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(745, 8);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(40, 40);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label1
             // 
@@ -67,15 +76,6 @@ namespace PresentacionesTienda
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Location = new System.Drawing.Point(745, 8);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(40, 40);
-            this.btnCerrar.TabIndex = 1;
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // btnAñadir
             // 
             this.btnAñadir.Location = new System.Drawing.Point(652, 75);
@@ -83,6 +83,7 @@ namespace PresentacionesTienda
             this.btnAñadir.Size = new System.Drawing.Size(40, 40);
             this.btnAñadir.TabIndex = 2;
             this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // dgvProductos
             // 
@@ -91,6 +92,8 @@ namespace PresentacionesTienda
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.Size = new System.Drawing.Size(764, 410);
             this.dgvProductos.TabIndex = 3;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            this.dgvProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellEnter);
             // 
             // txtBuscar
             // 
@@ -111,7 +114,7 @@ namespace PresentacionesTienda
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProductos";
