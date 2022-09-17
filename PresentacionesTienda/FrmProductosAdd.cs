@@ -17,11 +17,12 @@ namespace PresentacionesTienda
         public FrmProductosAdd()
         {
             InitializeComponent();
+            f = new Funciones();
             if (FrmProductos.producto.IdProductos > 0)
             {
                 txtNombre.Text = FrmProductos.producto.Nombre;
                 txtDescripcion.Text = FrmProductos.producto.Descripcion;
-                txtCosto.Text = FrmProductos.producto.Precio.ToString();
+                txtCosto.Text = FrmProductos.producto.Precio.ToString(); 
             }
         }
 

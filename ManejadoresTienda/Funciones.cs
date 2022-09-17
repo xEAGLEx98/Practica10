@@ -39,8 +39,8 @@ namespace ManejadoresTienda
             tabla.RowTemplate.Height = 30;
             tabla.ColumnHeadersHeight = 40;
             tabla.DataSource = ap.Mostrar(filtro).Tables["productos"];
-            tabla.Columns.Insert(2, g.Boton("Editar", Color.GreenYellow));
-            tabla.Columns.Insert(3, g.Boton("Eliminar", Color.IndianRed));
+            tabla.Columns.Insert(4, g.Boton("Editar", Color.GreenYellow));
+            tabla.Columns.Insert(5, g.Boton("Eliminar", Color.IndianRed));
             tabla.Columns[0].Visible = false;
         }
     }
